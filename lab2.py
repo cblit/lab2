@@ -35,14 +35,17 @@ def calc_median_temperature(temsorted):
         median = temsorted[(length+1)//2 -1]
     return median
 
-display_main_menu()
-z = get_user_input()
-average = calc_average(z)
-print("average is " + str(average))
-max , min = find_min_max(z)
-print("min is " + str(min) )
-print("max is " + str(max) )
-temsorted = sort_temperature(z)
-median = calc_median_temperature(temsorted)
-print("median number is " + str(median))
+def main():
+    display_main_menu()
+    z = get_user_input()
+    average = calc_average(z)
+    print("average is " + str(average))
+    max , min = find_min_max(z)
+    print("min is " + str(min) )
+    print("max is " + str(max) )
+    temsorted = sort_temperature(z)
+    median = calc_median_temperature(temsorted)
+    print("median number is " + str(median))
+
+main()
 
